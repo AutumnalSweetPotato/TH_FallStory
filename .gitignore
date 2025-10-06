@@ -1,0 +1,29 @@
+# Unity generated files
+[Tt]emp/
+[Oo]bj/
+[Ll]ibrary/
+[Bb]uild/
+[Bb]uilds/
+[Pp]ackages/
+[Ll]ogs/
+
+# Visual Studio generated files
+.vs/
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.pdb
+*.cache
+*.VC.db
+*.VC.opendb
+
+# OS generated files
+.DS_Store*
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
