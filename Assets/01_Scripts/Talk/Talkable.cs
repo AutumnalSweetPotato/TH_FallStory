@@ -7,13 +7,17 @@ public class Talkable : MonoBehaviour
     [SerializeField] private bool isEntered;
     [SerializeField] private bool hasName;
     [TextArea(1,3)]public string[] talkLines;
-
+    public Questable questable;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             isEntered = true;
+            if(questable != null)
+            {
+                DialogueManager.Instance.currentQuestable = questable;
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -21,6 +25,7 @@ public class Talkable : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             isEntered = false;
+            DialogueManager.Instance.currentQuestable = null;
         }
     }
     private void Update()

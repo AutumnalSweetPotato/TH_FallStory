@@ -880,6 +880,94 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &730066539
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 730066540}
+  - component: {fileID: 730066542}
+  - component: {fileID: 730066541}
+  m_Layer: 0
+  m_Name: Talk
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &730066540
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730066539}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1217671817}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &730066541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730066539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c087463f8c31d348a7ccd386531b801, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEntered: 0
+  hasName: 1
+  talkLines:
+  - n-Butch
+  - Hello! How is the weather today?
+  - n-Player
+  - It's great, the sun is shining. And you?
+  - n-Butch
+  - ' Yes, I also think the weather is great. What''s the temperature?'
+  - n-Player
+  - It's around 25 degrees.
+  - n-Butch
+  - Wonderful! This temperature is perfect for outdoor activities. I'm thinking of
+    going for a picnic later.
+  - n-Player
+  - That sounds like a good idea. The nice weather really makes people feel good.
+  questable: {fileID: 1219221521}
+--- !u!61 &730066542
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730066539}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.016946614, y: 0.7075205}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.2371016, y: 2.4150414}
+  m_EdgeRadius: 0
 --- !u!1001 &757431928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -998,6 +1086,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7110995972307629306, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
   m_PrefabInstance: {fileID: 757431928}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &757431930 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7110995972307629304, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+  m_PrefabInstance: {fileID: 757431928}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &967312028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,6 +1178,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 757431929}
+  - {fileID: 1217671817}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1312,6 +1406,7 @@ MonoBehaviour:
     going for a picnic later.
   - n-Player
   - That sounds like a good idea. The nice weather really makes people feel good.
+  questable: {fileID: 1691406350}
 --- !u!61 &1072092884
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1438,6 +1533,159 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a8a897227f6ba845ba7445e9823261f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1217671816
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 985875433}
+    m_Modifications:
+    - target: {fileID: 2143380350358255599, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 627610733496a2c44bdfa3f64de1857e, type: 2}
+    - target: {fileID: 2441589521075025859, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: blankAnimation
+      value: 
+      objectReference: {fileID: 7400000, guid: de73329f78eb6d645a9a70faf2bddfce, type: 2}
+    - target: {fileID: 2823089906561786581, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823089906561786581, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823089906561786581, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823089906561786581, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823089906561786581, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823089906561786581, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335019990096961889, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: gUID
+      value: 5b9cff00-7645-4119-b45e-96d9a8d8e0a2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110995972307629304, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_Name
+      value: NPC_Butch (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110995972307629306, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110995972307629306, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110995972307629306, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110995972307629306, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110995972307629306, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110995972307629306, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110995972307629306, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110995972307629306, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110995972307629306, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110995972307629306, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110995972307629306, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110995972307629307, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110995972307629307, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6177883350512257784, guid: afba78ae84664a941a55c31758ab5cf9, type: 3}
+    - target: {fileID: 7110995972307629307, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110995972307629307, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110995972307629307, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110995972307629307, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110995972307629307, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215517053759471781, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+      propertyPath: so_NPCScheduleEventList
+      value: 
+      objectReference: {fileID: 11400000, guid: d9786d391beff0447b3520ef52f3d755, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+--- !u!4 &1217671817 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7110995972307629306, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+  m_PrefabInstance: {fileID: 1217671816}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1219221511 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7110995972307629304, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
+  m_PrefabInstance: {fileID: 1217671816}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1219221521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219221511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f6c8f5567ddc3f48aec691c72bd4d5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest:
+    questName: TalkWithKnight
+    questType: 2
+    questStatus: 1
+    expRewards: 200
+    goldRewards: 200
 --- !u!1 &1303838851
 GameObject:
   m_ObjectHideFlags: 0
@@ -1675,6 +1923,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedMultiplier: 1
   equippedItemSpriteRenderer: {fileID: 4935916912828974275}
+  exp: 0
+  gold: 0
 --- !u!114 &1451437912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1926,12 +2176,30 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8926554039188762473, guid: 8e777c2a0d47cdd4fbd7107fa4de0667, type: 3}
   m_PrefabInstance: {fileID: 757431928}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 757431930}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d7c5dd1e7de8c548904d77331b0c46e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1691406350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757431930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f6c8f5567ddc3f48aec691c72bd4d5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest:
+    questName: FindLostCargo
+    questType: 1
+    questStatus: 1
+    expRewards: 100
+    goldRewards: 100
 --- !u!1 &2005720826
 GameObject:
   m_ObjectHideFlags: 0

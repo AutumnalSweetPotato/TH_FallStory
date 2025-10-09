@@ -175,3 +175,20 @@ public enum SoundName
     musicCalm1 = 2010
 
 }
+
+public enum QuestType
+{
+    none,
+    gathering, //收集
+    talk, //对话
+    reach,//探索
+    count
+}
+public enum QuestStatus
+{
+    none,
+    waitting,
+    accepted,
+    completed,
+    count
+}

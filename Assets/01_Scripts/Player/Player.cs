@@ -14,7 +14,6 @@ public class Player : Single<Player>, ISaveable
     private List<CharacterAttribute> characterAttributeList;            //角色状态列表
     private CharacterAttribute armsCharacterAttribute;                  //角色状态-手臂
     private CharacterAttribute toolCharacterAttribute;                  //角色状态-工具
-    private float movementSpeed;                                        //移动速度
     private Rigidbody2D rb;                                             //刚体
     private PlayerDirection dir;                                        //玩家移动方向
     private Camera mainCamera;                                          //摄像机
@@ -32,6 +31,16 @@ public class Player : Single<Player>, ISaveable
     [SerializeField] private float speedMultiplier = 1;                 //玩家速度倍数
     [SerializeField] private SpriteRenderer equippedItemSpriteRenderer; //玩家装备物品的SpriteRenderer
     //[SerializeField] private GameObject perfab;
+
+    //*********************************************任务系统字段*********************************************
+    public Dictionary<string, Quest> questDictionary = new Dictionary<string, Quest>();
+    //*********************************************-----------*********************************************
+
+    //*********************************************玩家属性字段********************************************
+    public int exp;
+    public int gold;
+    private float movementSpeed;    
+    //*********************************************-----------*********************************************
 
     private string _iSaveableUniqueID;
     public string ISaveableUniqueID { get => _iSaveableUniqueID; set => _iSaveableUniqueID = value; }

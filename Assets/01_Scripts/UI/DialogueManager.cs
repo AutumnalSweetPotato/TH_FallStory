@@ -14,6 +14,8 @@ public class DialogueManager : Single<DialogueManager>
     [SerializeField] private float textSpeed;
 
     private bool isScrolling;
+
+    public Questable currentQuestable;
     protected override void Awake()
     {
         base.Awake();
@@ -36,11 +38,19 @@ public class DialogueManager : Single<DialogueManager>
             {
                 dialogueBox.SetActive(false);
                 Player.Instance.EnablePlayerInput();
+
+                if (currentQuestable != null)
+                {
+                    currentQuestable.DelegateQuest();
+                    QuestManager.Instance.UpdateQuestList();
+                }
+
+
             }
         }
     }
 
-    public void ShowDialogue(string[] newLines,bool hasName)
+    public void ShowDialogue(string[] newLines, bool hasName)
     {
         dialogueBox.SetActive(true);
         dialogueLines = newLines;
@@ -65,7 +75,7 @@ public class DialogueManager : Single<DialogueManager>
     {
         isScrolling = true;
         dialogueText.text = "";
-        foreach(char c in dialogueLines[currentLine].ToCharArray())
+        foreach (char c in dialogueLines[currentLine].ToCharArray())
         {
             dialogueText.text += c;
             yield return new WaitForSeconds(textSpeed);
