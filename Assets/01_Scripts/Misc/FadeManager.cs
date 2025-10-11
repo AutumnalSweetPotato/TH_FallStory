@@ -29,6 +29,25 @@ public class FadeManager : Single<FadeManager>
        
         
     }
+    
+    public IEnumerator FadeIn(CanvasGroup canvas)//½¥°×
+    {
+        if (!isFadeing)
+        {
+            
+            yield return Fade(0, canvas);
+
+        }
+    }
+    public IEnumerator FadeOut(CanvasGroup canvas)//½¥ºÚ
+    {
+        if (!isFadeing)
+        {
+            
+            yield return Fade(1, canvas);
+
+        }
+    }
     private IEnumerator Fade(float targetAlpha)
     {
         CanvasGroup fadeCanvas = GameObject.FindGameObjectWithTag
@@ -43,5 +62,25 @@ public class FadeManager : Single<FadeManager>
         }
         fadeCanvas.blocksRaycasts = false;
         isFadeing = false;
+    }
+    private IEnumerator Fade(float targetAlpha,CanvasGroup canvas)
+    {
+        
+        CanvasGroup fadeCanvas = canvas;
+        
+
+        if(fadeCanvas != null)
+        {
+            isFadeing = true;
+            float speed = Mathf.Abs(fadeCanvas.alpha - targetAlpha) / fadeTime;
+            while (!Mathf.Approximately(fadeCanvas.alpha, targetAlpha))
+            {
+                fadeCanvas.alpha = Mathf.MoveTowards(fadeCanvas.alpha, targetAlpha, Time.deltaTime * speed);
+                yield return null;
+            }
+
+            isFadeing = false;
+        }
+        
     }
 }

@@ -11,4 +11,7 @@ public class Quest
 
     public int expRewards;
     public int goldRewards;
+
+    [Header("Gathering Type Quest")]
+    public int requireAmount;
 }

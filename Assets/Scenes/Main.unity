@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1394,18 +1393,11 @@ MonoBehaviour:
   hasName: 1
   talkLines:
   - n-Butch
-  - Hello! How is the weather today?
+  - "\u4F60\u597D\uFF0C\u4F60\u80FD\u5E2E\u52A9\u6211\u627E\u56DE\u6211\u9057\u5931\u7684\u7389\u7C73\u5417\uFF1F"
   - n-Player
-  - It's great, the sun is shining. And you?
+  - "\u4F60\u9057\u5931\u4E86\u591A\u5C11\u4E2A\u7389\u7C73\u5462\uFF1F"
   - n-Butch
-  - ' Yes, I also think the weather is great. What''s the temperature?'
-  - n-Player
-  - It's around 25 degrees.
-  - n-Butch
-  - Wonderful! This temperature is perfect for outdoor activities. I'm thinking of
-    going for a picnic later.
-  - n-Player
-  - That sounds like a good idea. The nice weather really makes people feel good.
+  - "\u6211\u9057\u5931\u4E863\u4E2A\u7389\u7C73\uFF0C\u4F60\u5E2E\u6211\u627E\u56DE\u6765\u540E\u6211\u4F1A\u7ED9\u4F60\u62A5\u916C\u7684\u3002"
   questable: {fileID: 1691406350}
 --- !u!61 &1072092884
 BoxCollider2D:
@@ -1686,6 +1678,7 @@ MonoBehaviour:
     questStatus: 1
     expRewards: 200
     goldRewards: 200
+    requireAmount: 0
 --- !u!1 &1303838851
 GameObject:
   m_ObjectHideFlags: 0
@@ -1923,6 +1916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedMultiplier: 1
   equippedItemSpriteRenderer: {fileID: 4935916912828974275}
+  itemAcount: 0
   exp: 0
   gold: 0
 --- !u!114 &1451437912
@@ -2200,6 +2194,7 @@ MonoBehaviour:
     questStatus: 1
     expRewards: 100
     goldRewards: 100
+    requireAmount: 3
 --- !u!1 &2005720826
 GameObject:
   m_ObjectHideFlags: 0
@@ -2755,6 +2750,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5852034857275819083
 GameObject:
   m_ObjectHideFlags: 0
@@ -2873,6 +2869,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7661583559011642303
 GameObject:
   m_ObjectHideFlags: 0
@@ -2939,6 +2936,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &7690734217279158690
 Transform:
   m_ObjectHideFlags: 0
@@ -2986,6 +2984,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &7950003171177076000
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3070,6 +3069,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &8707137842457257976
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3154,3 +3154,4 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

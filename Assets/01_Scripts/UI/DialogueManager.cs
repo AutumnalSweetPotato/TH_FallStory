@@ -16,12 +16,14 @@ public class DialogueManager : Single<DialogueManager>
     private bool isScrolling;
 
     public Questable currentQuestable;
+
+    public QuestTarget questTarget;
     protected override void Awake()
     {
         base.Awake();
         dialogueText.text = string.Empty;
     }
-
+    
     private void Update()
     {
         if (Input.GetMouseButtonUp(0) && dialogueBox.activeSelf && !isScrolling)
@@ -36,20 +38,26 @@ public class DialogueManager : Single<DialogueManager>
             }
             else
             {
-                dialogueBox.SetActive(false);
+                CanvasGroup canvasGroup = dialogueBox.GetComponent<CanvasGroup>();
+                StartCoroutine(FadeManager.Instance.FadeIn(canvasGroup));
                 Player.Instance.EnablePlayerInput();
+                StartCoroutine(DelayHide(1f));
 
                 if (currentQuestable != null)
                 {
                     currentQuestable.DelegateQuest();
                     QuestManager.Instance.UpdateQuestList();
                 }
+                else
+                {
+
+                }
 
 
             }
         }
     }
-
+    
     public void ShowDialogue(string[] newLines, bool hasName)
     {
         dialogueBox.SetActive(true);
@@ -60,6 +68,9 @@ public class DialogueManager : Single<DialogueManager>
         StartCoroutine(ScrollingText());
         nameText.gameObject.SetActive(hasName);
         Player.Instance.DisablePlayerInput();
+        CanvasGroup canvasGroup =  dialogueBox.GetComponent<CanvasGroup>();
+        canvasGroup.alpha = 0;
+        StartCoroutine(FadeManager.Instance.FadeOut(canvasGroup));
     }
     private void CheckName()
     {
@@ -82,5 +93,9 @@ public class DialogueManager : Single<DialogueManager>
         }
         isScrolling = false;
     }
-
+    private IEnumerator DelayHide(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+        dialogueBox.SetActive(false);
+    }
 }

@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1093,35 +1092,6 @@ MonoBehaviour:
   m_ShadowIntensity: 0.75
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
-  m_Vertices:
-  - position: {x: 0.9985302, y: 0.9985302, z: 0}
-    color: {r: 0.70710677, g: 0.70710677, b: 0, a: 0}
-    uv: {x: 0, y: 0}
-  - position: {x: 0.9985302, y: 0.9985302, z: 0}
-    color: {r: 0, g: 0, b: 0, a: 1}
-    uv: {x: 0, y: 0}
-  - position: {x: -0.9985302, y: 0.9985302, z: 0}
-    color: {r: -0.70710677, g: 0.70710677, b: 0, a: 0}
-    uv: {x: 0, y: 0}
-  - position: {x: -0.9985302, y: 0.9985302, z: 0}
-    color: {r: 0, g: 0, b: 0, a: 1}
-    uv: {x: 0, y: 0}
-  - position: {x: -0.99853003, y: -0.9985304, z: 0}
-    color: {r: -0.70710665, g: -0.7071069, b: 0, a: 0}
-    uv: {x: 0, y: 0}
-  - position: {x: -0.99853003, y: -0.9985304, z: 0}
-    color: {r: 0, g: 0, b: 0, a: 1}
-    uv: {x: 0, y: 0}
-  - position: {x: 0.99853003, y: -0.9985304, z: 0}
-    color: {r: 0.70710665, g: -0.7071069, b: 0, a: 0}
-    uv: {x: 0, y: 0}
-  - position: {x: 0.99853003, y: -0.9985304, z: 0}
-    color: {r: 0, g: 0, b: 0, a: 1}
-    uv: {x: 0, y: 0}
-  - position: {x: 0, y: 0, z: 0}
-    color: {r: 0, g: 0, b: 0, a: 1}
-    uv: {x: 0, y: 0}
-  m_Triangles: 030001000800020000000100030002000100050003000800040002000300050004000300070005000800060004000500070006000500010007000800000006000700010000000700
   m_LocalBounds:
     m_Center: {x: 0, y: -0.00000011920929, z: 0}
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
@@ -10042,6 +10012,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cad4c6ae1d3235f46b8cde6e86790d76, type: 3}
+--- !u!1 &505156326 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8423373189907357157, guid: cad4c6ae1d3235f46b8cde6e86790d76, type: 3}
+  m_PrefabInstance: {fileID: 505156325}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &512895963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15833,35 +15808,6 @@ MonoBehaviour:
   m_ShadowIntensity: 0.75
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
-  m_Vertices:
-  - position: {x: 0.9985302, y: 0.9985302, z: 0}
-    color: {r: 0.70710677, g: 0.70710677, b: 0, a: 0}
-    uv: {x: 0, y: 0}
-  - position: {x: 0.9985302, y: 0.9985302, z: 0}
-    color: {r: 0, g: 0, b: 0, a: 1}
-    uv: {x: 0, y: 0}
-  - position: {x: -0.9985302, y: 0.9985302, z: 0}
-    color: {r: -0.70710677, g: 0.70710677, b: 0, a: 0}
-    uv: {x: 0, y: 0}
-  - position: {x: -0.9985302, y: 0.9985302, z: 0}
-    color: {r: 0, g: 0, b: 0, a: 1}
-    uv: {x: 0, y: 0}
-  - position: {x: -0.99853003, y: -0.9985304, z: 0}
-    color: {r: -0.70710665, g: -0.7071069, b: 0, a: 0}
-    uv: {x: 0, y: 0}
-  - position: {x: -0.99853003, y: -0.9985304, z: 0}
-    color: {r: 0, g: 0, b: 0, a: 1}
-    uv: {x: 0, y: 0}
-  - position: {x: 0.99853003, y: -0.9985304, z: 0}
-    color: {r: 0.70710665, g: -0.7071069, b: 0, a: 0}
-    uv: {x: 0, y: 0}
-  - position: {x: 0.99853003, y: -0.9985304, z: 0}
-    color: {r: 0, g: 0, b: 0, a: 1}
-    uv: {x: 0, y: 0}
-  - position: {x: 0, y: 0, z: 0}
-    color: {r: 0, g: 0, b: 0, a: 1}
-    uv: {x: 0, y: 0}
-  m_Triangles: 030001000800020000000100030002000100050003000800040002000300050004000300070005000800060004000500070006000500010007000800000006000700010000000700
   m_LocalBounds:
     m_Center: {x: 0, y: -0.00000011920929, z: 0}
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
@@ -16210,6 +16156,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cad4c6ae1d3235f46b8cde6e86790d76, type: 3}
+--- !u!1 &746950556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8423373189907357157, guid: cad4c6ae1d3235f46b8cde6e86790d76, type: 3}
+  m_PrefabInstance: {fileID: 746950555}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &746950557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746950556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2367986520612646ac2079a20eff654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questName: FindLostCargo
+  questType: 0
+  amount: 1
+  hasTalked: 0
+  hasReached: 0
 --- !u!4 &779791988 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7239776987862005413, guid: 4e459f9ee34e8c3409277d948f17677c, type: 3}
@@ -17783,6 +17751,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8423373189907357156, guid: cad4c6ae1d3235f46b8cde6e86790d76, type: 3}
   m_PrefabInstance: {fileID: 505156325}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1435342884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505156326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2367986520612646ac2079a20eff654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questName: FindLostCargo
+  questType: 0
+  amount: 1
+  hasTalked: 0
+  hasReached: 0
 --- !u!4 &1530925729 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5269295181898253637, guid: 9d9e2611c58d7474fb9e2ccc52a34a60, type: 3}
@@ -18334,6 +18319,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cad4c6ae1d3235f46b8cde6e86790d76, type: 3}
+--- !u!1 &1900232967 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8423373189907357157, guid: cad4c6ae1d3235f46b8cde6e86790d76, type: 3}
+  m_PrefabInstance: {fileID: 1900232966}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1900232968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900232967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2367986520612646ac2079a20eff654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questName: FindLostCargo
+  questType: 0
+  amount: 1
+  hasTalked: 0
+  hasReached: 0
 --- !u!1 &1904855493
 GameObject:
   m_ObjectHideFlags: 0
