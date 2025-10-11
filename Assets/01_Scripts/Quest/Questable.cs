@@ -5,16 +5,21 @@ using UnityEngine;
 public class Questable : MonoBehaviour
 {
     public Quest quest;
+    public bool isFinished;
     public void DelegateQuest()
     {
-        if(quest.questStatus == QuestStatus.waitting)
+        if(isFinished == false)
         {
-            quest.questStatus = QuestStatus.accepted;
-            Player.Instance.questDictionary.Add(quest.questName, quest);
+            if (quest.questStatus == QuestStatus.waitting)
+            {
+                quest.questStatus = QuestStatus.accepted;
+                Player.Instance.questDictionary.Add(quest.questName, quest);
+            }
+            else
+            {
+                Debug.Log("任务：" + quest.questName + "已经领取！");
+            }
         }
-        else
-        {
-            Debug.Log("任务："+quest.questName+"已经领取！");
-        }
+        
     }
 }

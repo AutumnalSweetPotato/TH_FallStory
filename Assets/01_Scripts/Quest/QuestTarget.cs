@@ -67,11 +67,7 @@ public class QuestTarget : MonoBehaviour
                 hasReached = true;
                 QuestComplete();
             }
-            else if (questType == QuestType.Talk)
-            {
-                hasTalked = true;
-                QuestComplete();
-            }
+            
         }
     }
 }

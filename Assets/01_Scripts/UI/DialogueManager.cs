@@ -18,6 +18,8 @@ public class DialogueManager : Single<DialogueManager>
     public Questable currentQuestable;
 
     public QuestTarget questTarget;
+
+    public Talkable talkable;
     protected override void Awake()
     {
         base.Awake();
@@ -38,20 +40,38 @@ public class DialogueManager : Single<DialogueManager>
             }
             else
             {
-                CanvasGroup canvasGroup = dialogueBox.GetComponent<CanvasGroup>();
-                StartCoroutine(FadeManager.Instance.FadeIn(canvasGroup));
-                Player.Instance.EnablePlayerInput();
-                StartCoroutine(DelayHide(1f));
-
-                if (currentQuestable != null)
+                if(CheckQuestIsComplete() && !currentQuestable.isFinished)
                 {
-                    currentQuestable.DelegateQuest();
-                    QuestManager.Instance.UpdateQuestList();
+                    ShowDialogue(talkable.congratsLines, talkable.hasName);
+                    currentQuestable.isFinished = true;
                 }
                 else
                 {
+                    CanvasGroup canvasGroup = dialogueBox.GetComponent<CanvasGroup>();
+                    StartCoroutine(FadeManager.Instance.FadeIn(canvasGroup));
+                    Player.Instance.EnablePlayerInput();
+                    StartCoroutine(DelayHide(1f));
 
+                    if (currentQuestable != null)
+                    {
+                        currentQuestable.DelegateQuest();
+                        QuestManager.Instance.UpdateQuestList();
+                    }
+                    else
+                    {
+                        
+                    }
+                    if (questTarget != null)
+                    {
+                        questTarget.hasTalked = true;
+                        questTarget.QuestComplete();
+                    }
+                    else
+                    {
+                        return;
+                    }
                 }
+                    
 
 
             }
@@ -78,7 +98,6 @@ public class DialogueManager : Single<DialogueManager>
         {
             nameText.text = dialogueLines[currentLine].Substring(2);
             currentLine++;
-
         }
     }
 
@@ -97,5 +116,22 @@ public class DialogueManager : Single<DialogueManager>
     {
         yield return new WaitForSeconds(delayTime);
         dialogueBox.SetActive(false);
+    }
+
+    public bool CheckQuestIsComplete()
+    {
+        if (currentQuestable == null)
+        {
+            return false;
+        }
+        if(Player.Instance.questDictionary.TryGetValue(currentQuestable.quest.questName,out Quest quest))
+        {
+            if(quest.questStatus == QuestStatus.completed)
+            {
+                
+                return true;
+            }
+        }
+        return false;
     }
 }

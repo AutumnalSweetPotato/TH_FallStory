@@ -926,21 +926,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEntered: 0
   hasName: 1
-  talkLines:
-  - n-Butch
-  - Hello! How is the weather today?
-  - n-Player
-  - It's great, the sun is shining. And you?
-  - n-Butch
-  - ' Yes, I also think the weather is great. What''s the temperature?'
-  - n-Player
-  - It's around 25 degrees.
-  - n-Butch
-  - Wonderful! This temperature is perfect for outdoor activities. I'm thinking of
-    going for a picnic later.
-  - n-Player
-  - That sounds like a good idea. The nice weather really makes people feel good.
   questable: {fileID: 1219221521}
+  questTarget: {fileID: 0}
+  lines: []
+  congratsLines: []
+  completedLines: []
 --- !u!61 &730066542
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1391,14 +1381,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEntered: 0
   hasName: 1
-  talkLines:
-  - n-Butch
-  - "\u4F60\u597D\uFF0C\u4F60\u80FD\u5E2E\u52A9\u6211\u627E\u56DE\u6211\u9057\u5931\u7684\u7389\u7C73\u5417\uFF1F"
-  - n-Player
-  - "\u4F60\u9057\u5931\u4E86\u591A\u5C11\u4E2A\u7389\u7C73\u5462\uFF1F"
-  - n-Butch
-  - "\u6211\u9057\u5931\u4E863\u4E2A\u7389\u7C73\uFF0C\u4F60\u5E2E\u6211\u627E\u56DE\u6765\u540E\u6211\u4F1A\u7ED9\u4F60\u62A5\u916C\u7684\u3002"
   questable: {fileID: 1691406350}
+  questTarget: {fileID: 0}
+  lines:
+  - n-Butch
+  - "\u4F60\u597D\u5B69\u5B50\uFF0C\u4F60\u80FD\u5E2E\u6211\u627E\u56DE3\u4E2A\u7389\u7C73\u5417"
+  - n-Player
+  - "\u5F53\u7136\u53EF\u4EE5"
+  congratsLines:
+  - n-Butch
+  - "\u54E6\u611F\u8C22\u4F60\u5B69\u5B50\uFF0C\u8FD9\u662F\u7ED9\u4F60\u76843\u4E2A\u91D1\u5E01!"
+  completedLines:
+  - n-Butch
+  - "\u8C22\u8C22\u4F60\u5B69\u5B50"
 --- !u!61 &1072092884
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1679,6 +1674,7 @@ MonoBehaviour:
     expRewards: 200
     goldRewards: 200
     requireAmount: 0
+  isFinished: 0
 --- !u!1 &1303838851
 GameObject:
   m_ObjectHideFlags: 0
@@ -2195,6 +2191,7 @@ MonoBehaviour:
     expRewards: 100
     goldRewards: 100
     requireAmount: 3
+  isFinished: 0
 --- !u!1 &2005720826
 GameObject:
   m_ObjectHideFlags: 0
